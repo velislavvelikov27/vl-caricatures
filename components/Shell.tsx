@@ -18,6 +18,24 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <Link className="pill" href="/orders">Orders</Link>
             <Link className="pill" href="/security">2FA</Link>
             <Link className="btn btn-primary" href="/dashboard">Dashboard</Link>
+
+            <a
+              className="pill"
+              href="https://www.instagram.com/digitalcaricaturesbg/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+
+            <a
+              className="pill"
+              href="https://www.facebook.com/digitalcaricaturesbg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
           </nav>
         </div>
       </header>
