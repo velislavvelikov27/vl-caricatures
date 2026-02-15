@@ -4,8 +4,6 @@ import { Shell } from "@/components/Shell";
 
 const portfolio = Array.from({ length: 8 }).map((_, i) => `/portfolio/${i + 1}.png`);
 
-
-
 export default function Home() {
   return (
     <Shell>
@@ -18,7 +16,7 @@ export default function Home() {
           </p>
 
           <div className="row" style={{ marginTop: 14 }}>
-            <Link className="btn btn-primary" href="/signup">Create account</Link>
+            <Link className="btn btn-primary" href="/order">Order now</Link>
             <a className="btn" href="#pricing">View pricing</a>
             <Link className="btn" href="/login">Log in</Link>
           </div>
@@ -30,7 +28,16 @@ export default function Home() {
             </div>
             <div className="card" style={{ padding: 16 }}>
               <div style={{ fontWeight: 900 }}>Private uploads</div>
-              <div className="small" style={{ marginTop: 4 }}>Only the owner can access uploaded photos</div>
+              <div className="small" style={{ marginTop: 4 }}>Protected storage + access policies</div>
+            </div>
+          </div>
+
+          <div className="grid grid-2 section">
+            <div className="card" style={{ padding: 16 }}>
+              <div className="kpi"><b>2–4 days</b><span>production time</span></div>
+            </div>
+            <div className="card" style={{ padding: 16 }}>
+              <div className="kpi"><b>HD file</b><span>print-ready export</span></div>
             </div>
           </div>
         </div>
@@ -47,6 +54,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HOW IT WORKS */}
+      <section className="section">
+        <h2 style={{ margin: "0 0 10px", fontWeight: 950, letterSpacing: "-.4px" }}>How it works</h2>
+        <div className="grid grid-2">
+          <div className="card" style={{ padding: 18 }}>
+            <div className="badge">Step 1</div>
+            <h3 style={{ margin: "10px 0 6px" }}>Send photos + details</h3>
+            <p className="p" style={{ margin: 0 }}>
+              Create an order, upload a photo, choose size, number of faces, frame option, and notes.
+            </p>
+          </div>
+
+          <div className="card" style={{ padding: 18 }}>
+            <div className="badge">Step 2</div>
+            <h3 style={{ margin: "10px 0 6px" }}>We draw your caricature</h3>
+            <p className="p" style={{ margin: 0 }}>
+              Hand-drawn digitally. Production time is usually 2–4 days depending on complexity.
+            </p>
+          </div>
+
+          <div className="card" style={{ padding: 18 }}>
+            <div className="badge">Step 3</div>
+            <h3 style={{ margin: "10px 0 6px" }}>Delivery</h3>
+            <p className="p" style={{ margin: 0 }}>
+              You receive a high-resolution digital file, ready for sharing or printing.
+            </p>
+          </div>
+
+          <div className="card" style={{ padding: 18 }}>
+            <div className="badge">Security</div>
+            <h3 style={{ margin: "10px 0 6px" }}>Protected client area</h3>
+            <p className="p" style={{ margin: 0 }}>
+              Login + optional 2FA. Orders are protected with Row Level Security (RLS) and private storage policies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PORTFOLIO */}
       <section className="section">
         <h2 style={{ margin: "0 0 10px", fontWeight: 950, letterSpacing: "-.4px" }}>Portfolio</h2>
         <div className="grid grid-4">
@@ -58,6 +104,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PRICING */}
       <section id="pricing" className="section">
         <h2 style={{ margin: "0 0 10px", fontWeight: 950, letterSpacing: "-.4px" }}>Pricing</h2>
 
@@ -84,16 +131,32 @@ export default function Home() {
           <div>💡 Custom idea request: +5€</div>
           <div>⏳ Production time: 2–4 days 😁</div>
         </div>
+
+        {/* WHAT YOU GET */}
+        <div className="card section" style={{ padding: 18 }}>
+          <h3 style={{ marginTop: 0 }}>What you get</h3>
+          <ul style={{ margin: 0, paddingLeft: 18, color: "var(--muted)" }}>
+            <li>High-resolution digital file (ready to share)</li>
+            <li>Print-friendly size (A4 or 30×40)</li>
+            <li>Secure client area with optional 2FA</li>
+          </ul>
+        </div>
       </section>
 
-      <section className="section card" style={{ padding: 18 }}>
-        <h2 style={{ marginTop: 0 }}>Secure Access</h2>
+      {/* CONTACT */}
+      <section id="contact" className="section card" style={{ padding: 18 }}>
+        <h2 style={{ marginTop: 0 }}>Contact</h2>
         <p className="p" style={{ marginTop: 8 }}>
-          Member login + protected dashboard. Optional 2FA (TOTP) via Google/Microsoft Authenticator reduces risk if a password is compromised.
+          Fastest way to reach me: Instagram or Facebook.
         </p>
-        <div className="row" style={{ marginTop: 12 }}>
-          <Link className="btn" href="/security">Manage 2FA</Link>
-          <Link className="btn btn-primary" href="/order">Create order</Link>
+        <div className="row" style={{ marginTop: 10 }}>
+          <a className="btn btn-primary" href="https://www.instagram.com/digitalcaricaturesbg/" target="_blank" rel="noreferrer">
+            Instagram DM
+          </a>
+          <a className="btn" href="https://www.facebook.com/digitalcaricaturesbg" target="_blank" rel="noreferrer">
+            Facebook Page
+          </a>
+          <Link className="btn" href="/order">Create order</Link>
         </div>
       </section>
     </Shell>

@@ -170,3 +170,33 @@ label{ color:#333; font-size: 14px; display:grid; gap: 6px; }
 }
 .tr.head{ font-weight: 800; background: var(--soft); }
 .tr + .tr{ border-top: 1px solid var(--border); }
+
+.footer{
+  border-top: 1px solid var(--border);
+  padding: 26px 0;
+  margin-top: 28px;
+}
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.kpi{
+  display:grid;
+  gap: 4px;
+}
+.kpi b{ font-size: 16px; }
+.kpi span{ color: var(--muted); font-size: 13px; }

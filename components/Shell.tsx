@@ -15,6 +15,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </Link>
 
           <nav className="nav">
+            <a className="pill" href="/#pricing">Pricing</a>
+            <a className="pill" href="/#contact">Contact</a>
+
             <Link className="pill" href="/orders">Orders</Link>
             <Link className="pill" href="/security">2FA</Link>
             <Link className="btn btn-primary" href="/dashboard">Dashboard</Link>
@@ -41,6 +44,17 @@ export function Shell({ children }: { children: React.ReactNode }) {
       </header>
 
       <main className="container">{children}</main>
+
+      <footer className="footer">
+        <div className="container footer-inner">
+          <div className="small">© {new Date().getFullYear()} V&L DIGITAL CARICATURES</div>
+          <div className="row">
+            <a className="pill" href="https://www.instagram.com/digitalcaricaturesbg/" target="_blank" rel="noreferrer">Instagram</a>
+            <a className="pill" href="https://www.facebook.com/digitalcaricaturesbg" target="_blank" rel="noreferrer">Facebook</a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
+
