@@ -20,7 +20,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
             <Link className="pill" href="/orders">Orders</Link>
             <Link className="pill" href="/security">2FA</Link>
+            <Link className="btn" href="/order">Order</Link>
             <Link className="btn btn-primary" href="/dashboard">Dashboard</Link>
+            
 
             <a
               className="pill"

@@ -140,7 +140,13 @@ a:hover{ text-decoration:underline; }
   border: 1px solid var(--border);
   background:#fff;
 }
-.thumb img{ width:100%; height:auto; display:block; object-fit:cover; }
+.thumb img{
+  width: 100%;
+  height: 240px;       /* можеш да смениш на 220 / 260 */
+  display: block;
+  object-fit: cover;   /* това прави crop */
+}
+
 
 .form{
   display:grid;
@@ -221,3 +227,15 @@ body::after{
 
   background: rgba(255,255,255,0.85);
 }
+
+/* Mobile nav cleanup */
+@media (max-width: 720px){
+  .nav .pill{
+    display: none;
+  }
+  .nav .btn{
+    padding: 10px 12px;
+    border-radius: 999px;
+  }
+}
+
