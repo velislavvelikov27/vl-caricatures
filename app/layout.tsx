@@ -1,8 +1,11 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "V&L DIGITAL CARICATURES",
-  description: "Secure orders with login + 2FA",
+  title: "V&L Digital Caricatures",
+  description: "Secure caricature orders with optional 2FA.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -12,3 +15,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
