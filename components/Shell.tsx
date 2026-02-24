@@ -5,6 +5,11 @@ import { SocialFloat } from "@/components/SocialFloat";
 export function Shell({ children }: { children: React.ReactNode }) {
   return (
     <>
+    <div className="topbar">
+  <div className="topbar-inner">
+    🚚 Free delivery for orders over <b>50€</b> • 🔥 Up to <b>25% OFF</b> (limited time)
+  </div>
+</div>
       <header className="header">
         <div className="header-inner">
           <Link href="/" className="brand">
@@ -16,33 +21,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </Link>
 
           <nav className="nav">
-            <a className="pill" href="/#pricing">Pricing</a>
-            <a className="pill" href="/#contact">Contact</a>
+  <a className="pill" href="/#contact">Contact</a>
+  <a className="pill" href="/#portfolio">Products</a>
+  <a className="pill" href="/#pricing">Pricing</a>
 
-            <Link className="pill" href="/orders">Orders</Link>
-            <Link className="pill" href="/security">2FA</Link>
-            <Link className="btn" href="/order">Order</Link>
-            <Link className="btn btn-primary" href="/dashboard">Dashboard</Link>
-            
-
-            <a
-              className="pill"
-              href="https://www.instagram.com/digitalcaricaturesbg/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-
-            <a
-              className="pill"
-              href="https://www.facebook.com/digitalcaricaturesbg"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Facebook
-            </a>
-          </nav>
+  <Link className="btn" href="/login">Login</Link>
+  <Link className="btn btn-primary" href="/dashboard">Dashboard</Link>
+</nav>
         </div>
       </header>
 

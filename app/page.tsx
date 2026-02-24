@@ -93,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* PORTFOLIO */}
-      <section className="section">
+      <section id="portfolio" className="section">
         <h2 style={{ margin: "0 0 10px", fontWeight: 950, letterSpacing: "-.4px" }}>Portfolio</h2>
         <div className="grid grid-4">
           {portfolio.map((src) => (

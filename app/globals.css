@@ -297,3 +297,23 @@ body::after{
   .social-btn{ width: 50px; height: 50px; }
   .social-btn img{ width: 26px; height: 26px; }
 }
+
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: #0a0a0a;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.topbar-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 9px 22px;
+  font-size: 13px;
+  display:flex;
+  justify-content:center;
+  text-align:center;
+  gap: 10px;
+}
