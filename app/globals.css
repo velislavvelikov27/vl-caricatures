@@ -239,3 +239,61 @@ body::after{
   }
 }
 
+.social-float{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 200;
+}
+
+.social-btn{
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.10);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.social-btn img{
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+.social-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.14);
+}
+
+/* glow variants */
+.social-btn.ig{
+  box-shadow:
+    0 0 0 1px rgba(255, 0, 150, .18),
+    0 0 18px rgba(255, 0, 150, .25),
+    0 0 38px rgba(255, 140, 0, .18),
+    0 10px 30px rgba(0,0,0,.10);
+}
+
+.social-btn.fb{
+  box-shadow:
+    0 0 0 1px rgba(24, 119, 242, .20),
+    0 0 22px rgba(24, 119, 242, .22),
+    0 10px 30px rgba(0,0,0,.10);
+}
+
+/* mobile: little smaller */
+@media (max-width: 720px){
+  .social-btn{ width: 50px; height: 50px; }
+  .social-btn img{ width: 26px; height: 26px; }
+}

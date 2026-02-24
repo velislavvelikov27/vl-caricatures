@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { SocialFloat } from "@/components/SocialFloat";
 
 export function Shell({ children }: { children: React.ReactNode }) {
   return (
@@ -56,6 +57,10 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
+      <SocialFloat />
+      <main className="container">{children}</main>
+<SocialFloat />
+<footer className="footer"> ... </footer>
     </>
   );
 }
