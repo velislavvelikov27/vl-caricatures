@@ -5,15 +5,24 @@ import { SocialFloat } from "@/components/SocialFloat";
 export function Shell({ children }: { children: React.ReactNode }) {
   return (
     <>
-    <div className="topbar">
-  <div className="topbar-inner">
-    🚚 Free delivery for orders over <b>50€</b> • 🔥 Up to <b>25% OFF</b> (limited time)
-  </div>
-</div>
+      {/* TOP PROMO BAR */}
+      <div className="topbar">
+        <div className="topbar-inner">
+          🚚 Free delivery for orders over <b>50€</b> • 🔥 Up to <b>25% OFF</b> (limited time)
+        </div>
+      </div>
+
+      {/* HEADER */}
       <header className="header">
         <div className="header-inner">
           <Link href="/" className="brand">
-            <Image src="/logo.png" alt="V&L" width={44} height={44} />
+            <Image
+              src="/logo.png"
+              alt="V&L"
+              width={40}
+              height={40}
+              style={{ borderRadius: 10 }}
+            />
             <div>
               <div className="brand-title">V&L DIGITAL CARICATURES</div>
               <div className="brand-sub">Digital caricatures from photos</div>
@@ -21,32 +30,48 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </Link>
 
           <nav className="nav">
-  <a className="pill" href="/#contact">Contact</a>
-  <a className="pill" href="/#portfolio">Products</a>
-  <a className="pill" href="/#pricing">Pricing</a>
+            <a className="pill" href="/#contact">Contact</a>
+            <a className="pill" href="/#portfolio">Products</a>
+            <a className="pill" href="/#pricing">Pricing</a>
 
-  <Link className="btn" href="/login">Login</Link>
-  <Link className="btn btn-primary" href="/dashboard">Dashboard</Link>
-</nav>
+            <Link className="btn" href="/login">Login</Link>
+            <Link className="btn btn-primary" href="/dashboard">Dashboard</Link>
+          </nav>
         </div>
       </header>
 
+      {/* PAGE CONTENT */}
       <main className="container">{children}</main>
 
+      {/* FLOATING SOCIAL BUTTONS */}
+      <SocialFloat />
+
+      {/* FOOTER */}
       <footer className="footer">
         <div className="container footer-inner">
-          <div className="small">© {new Date().getFullYear()} V&L DIGITAL CARICATURES</div>
+          <div className="small">
+            © {new Date().getFullYear()} V&L DIGITAL CARICATURES
+          </div>
           <div className="row">
-            <a className="pill" href="https://www.instagram.com/digitalcaricaturesbg/" target="_blank" rel="noreferrer">Instagram</a>
-            <a className="pill" href="https://www.facebook.com/digitalcaricaturesbg" target="_blank" rel="noreferrer">Facebook</a>
+            <a
+              className="pill"
+              href="https://www.instagram.com/digitalcaricaturesbg/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+            <a
+              className="pill"
+              href="https://www.facebook.com/digitalcaricaturesbg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
           </div>
         </div>
       </footer>
-      <SocialFloat />
-      <main className="container">{children}</main>
-<SocialFloat />
-<footer className="footer"> ... </footer>
     </>
   );
 }
-
